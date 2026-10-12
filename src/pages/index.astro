@@ -1,0 +1,80 @@
+---
+const githubUrl = 'https://github.com/irkuhs';
+const linkedinUrl = 'https://www.linkedin.com/in/ahmad-shukri-faizul-akmal-245595327';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Shukri is a backend developer focused on practical, reliable web applications." />
+    <meta name="theme-color" content="#0b0d10" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Shukri — Backend Developer</title>
+  </head>
+  <body>
+    <main>
+      <section class="card" aria-labelledby="intro-heading">
+        <div class="portrait-wrap" aria-hidden="true">
+          <img src="https://github.com/irkuhs.png" alt="" width="112" height="112" />
+          <span class="status"></span>
+        </div>
+
+        <p class="eyebrow">Hello, I'm</p>
+        <h1 id="intro-heading">Shukri.</h1>
+        <p class="role">Backend developer</p>
+        <p class="intro">
+          I build practical, reliable web applications with a focus on Laravel,
+          PHP, and modern web technologies.
+        </p>
+
+        <nav aria-label="Social profiles">
+          <a class="primary" href={githubUrl} target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.3-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18A10.98 10.98 0 0 1 12 6.1c.98 0 1.95.13 2.87.39 2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.39-5.28 5.68.42.36.79 1.07.79 2.16v3.25c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z" /></svg>
+            GitHub
+          </a>
+          {linkedinUrl && (
+            <a href={linkedinUrl} target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 7.8H1.6V22h3.6V7.8ZM3.4 2A2.1 2.1 0 1 0 3.4 6.2 2.1 2.1 0 0 0 3.4 2ZM22.4 13.9c0-4.3-2.3-6.4-5.3-6.4a4.6 4.6 0 0 0-4.2 2.3v-2h-3.6V22h3.6v-7c0-1.8.35-3.6 2.62-3.6 2.23 0 2.26 2.1 2.26 3.72V22h3.62l.02-8.1Z" /></svg>
+              LinkedIn
+            </a>
+          )}
+        </nav>
+
+        <p class="availability"><span></span> Open to building useful things</p>
+      </section>
+    </main>
+
+    <footer>© {new Date().getFullYear()} Shukri</footer>
+  </body>
+</html>
+
+<style is:global>
+  :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #0b0d10; color: #f4f4f5; }
+  * { box-sizing: border-box; }
+  html { min-width: 320px; background: #0b0d10; }
+  body { min-height: 100vh; margin: 0; overflow-x: hidden; background: radial-gradient(circle at 50% 20%, rgba(52, 211, 153, .09), transparent 28rem), #0b0d10; }
+  body::before { content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .22; background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(to bottom, black, transparent 75%); }
+  main { min-height: calc(100vh - 72px); display: grid; place-items: center; padding: 48px 20px 24px; }
+  .card { width: min(100%, 650px); position: relative; text-align: center; padding: 58px 48px 48px; border: 1px solid rgba(255,255,255,.09); border-radius: 28px; background: rgba(17, 20, 24, .76); box-shadow: 0 28px 90px rgba(0,0,0,.38); backdrop-filter: blur(14px); }
+  .portrait-wrap { width: 112px; height: 112px; margin: 0 auto 30px; position: relative; }
+  .portrait-wrap img { display: block; width: 112px; height: 112px; border-radius: 50%; object-fit: cover; border: 3px solid #242a2f; box-shadow: 0 0 0 7px rgba(255,255,255,.035); }
+  .status { position: absolute; right: 5px; bottom: 6px; width: 18px; height: 18px; border-radius: 50%; background: #34d399; border: 4px solid #111418; }
+  .eyebrow { margin: 0 0 6px; color: #8b949e; font-size: .84rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+  h1 { margin: 0; font-size: clamp(3.6rem, 11vw, 6.8rem); line-height: .98; letter-spacing: -.075em; font-weight: 780; }
+  .role { margin: 16px 0 0; color: #34d399; font: 650 1.05rem/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .intro { max-width: 490px; margin: 24px auto 32px; color: #a9b0b7; font-size: clamp(1rem, 2.5vw, 1.1rem); line-height: 1.75; }
+  nav { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  nav a { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 142px; padding: 13px 20px; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; color: #e4e4e7; text-decoration: none; font-weight: 650; transition: transform .18s ease, border-color .18s ease, background .18s ease; }
+  nav a:hover { transform: translateY(-2px); border-color: rgba(52,211,153,.55); background: rgba(52,211,153,.07); }
+  nav a:focus-visible { outline: 3px solid rgba(52,211,153,.5); outline-offset: 3px; }
+  nav a.primary { background: #f4f4f5; border-color: #f4f4f5; color: #0b0d10; }
+  nav a.primary:hover { background: #34d399; border-color: #34d399; }
+  nav svg { width: 19px; height: 19px; fill: currentColor; }
+  .availability { display: flex; align-items: center; justify-content: center; gap: 9px; margin: 30px 0 0; color: #717982; font-size: .82rem; }
+  .availability span { width: 6px; height: 6px; border-radius: 50%; background: #34d399; box-shadow: 0 0 10px rgba(52,211,153,.75); }
+  footer { height: 72px; display: grid; place-items: center; color: #545b63; font-size: .78rem; }
+  @media (max-width: 520px) { main { padding-top: 24px; } .card { padding: 40px 22px 34px; border-radius: 22px; } h1 { font-size: 4rem; } nav a { width: 100%; } }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>
